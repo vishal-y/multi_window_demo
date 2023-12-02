@@ -7,10 +7,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+ /* background-color: #050816; */
+/* color: white; */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,19 +16,48 @@
   -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+
+body{
+   background-color: #050816;
+  overflow: hidden;
+}
+
+
+
+
+#outRound {
+  animation: spinInner 30s linear infinite;
+}
+
+#inRound {
+  animation: spinOuter 15s linear infinite;
+}
+
+@keyframes spinOuter {
+  from {
+    transform: rotate(0deg);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  to {
+    transform: rotate(360deg);
   }
 }
 
-body{
-  overflow: hidden;
+@keyframes spinInner {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+@keyframes rotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+  
 }
